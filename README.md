@@ -1,6 +1,6 @@
 # Payment API #
 
-RESTful API (including data model and the backing implementation) for money transfers between internal users/accounts.
+RESTful API for money transfers between internal users/accounts.
 
 #### Stack ####
 * Jetty

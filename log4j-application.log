@@ -5742,3 +5742,1016 @@
 
 2018-05-09 14:58:18 DEBUG PerformTransaction:48 - Successfully submitted!
 
+2018-05-09 21:15:47 DEBUG Database:81 - Executing statement prep0: CREATE TABLE ACCOUNTS( UserId INTEGER NOT NULL AUTO_INCREMENT,Balance DOUBLE NOT NULL DEFAULT 0,CONSTRAINT chk_balance CHECK (Balance >= 0),PRIMARY KEY (UserId))
+
+2018-05-09 21:15:47 DEBUG Database:83 - Executing prep0: CREATE TABLE ACCOUNTS( UserId INTEGER NOT NULL AUTO_INCREMENT,Balance DOUBLE NOT NULL DEFAULT 0,CONSTRAINT chk_balance CHECK (Balance >= 0),PRIMARY KEY (UserId)) completed!
+
+2018-05-09 21:15:47 DEBUG Database:81 - Executing statement prep1: CREATE TABLE TRANSACTIONS( TransactionId INTEGER NOT NULL,Status INTEGER NOT NULL DEFAULT 0,FromId INTEGER NOT NULL,ToId INTEGER NOT NULL,Count DOUBLE NOT NULL,CONSTRAINT chk_count CHECK (Count > 0),PRIMARY KEY (TransactionId) )
+
+2018-05-09 21:15:47 DEBUG Database:83 - Executing prep1: CREATE TABLE TRANSACTIONS( TransactionId INTEGER NOT NULL,Status INTEGER NOT NULL DEFAULT 0,FromId INTEGER NOT NULL,ToId INTEGER NOT NULL,Count DOUBLE NOT NULL,CONSTRAINT chk_count CHECK (Count > 0),PRIMARY KEY (TransactionId) ) completed!
+
+2018-05-09 21:15:47 DEBUG Database:81 - Executing statement prep2: INSERT INTO ACCOUNTS VALUES (?,?) {1: 0, 2: 500.0}
+
+2018-05-09 21:15:47 DEBUG Database:83 - Executing prep2: INSERT INTO ACCOUNTS VALUES (?,?) {1: 0, 2: 500.0} completed!
+
+2018-05-09 21:15:47 DEBUG Database:81 - Executing statement prep3: INSERT INTO ACCOUNTS VALUES (?,?) {1: 1, 2: 600.0}
+
+2018-05-09 21:15:47 DEBUG Database:83 - Executing prep3: INSERT INTO ACCOUNTS VALUES (?,?) {1: 1, 2: 600.0} completed!
+
+2018-05-09 21:15:47 DEBUG Database:81 - Executing statement prep4: INSERT INTO ACCOUNTS VALUES (?,?) {1: 2, 2: 120.0}
+
+2018-05-09 21:15:47 DEBUG Database:83 - Executing prep4: INSERT INTO ACCOUNTS VALUES (?,?) {1: 2, 2: 120.0} completed!
+
+2018-05-09 21:15:47 DEBUG Database:81 - Executing statement prep5: INSERT INTO ACCOUNTS VALUES (?,?) {1: 3, 2: 345.5}
+
+2018-05-09 21:15:47 DEBUG Database:83 - Executing prep5: INSERT INTO ACCOUNTS VALUES (?,?) {1: 3, 2: 345.5} completed!
+
+2018-05-09 21:16:14 DEBUG Database:69 - Executing statement prep6: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 21:16:14 DEBUG Database:71 - Retrieved result rs0: org.h2.result.LocalResult@4e54a131 columns: 1 rows: 1 pos: -1
+
+2018-05-09 21:16:14 DEBUG Database:69 - Executing statement prep7: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 21:16:14 DEBUG Database:71 - Retrieved result rs1: org.h2.result.LocalResult@6cc7865f columns: 1 rows: 1 pos: -1
+
+2018-05-09 21:16:14 DEBUG Database:69 - Executing statement prep8: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 21:16:14 DEBUG Database:71 - Retrieved result rs2: org.h2.result.LocalResult@7f15a09d columns: 1 rows: 1 pos: -1
+
+2018-05-09 21:16:14 DEBUG Database:69 - Executing statement prep9: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 21:16:14 DEBUG Database:71 - Retrieved result rs3: org.h2.result.LocalResult@4f242a5b columns: 1 rows: 1 pos: -1
+
+2018-05-09 21:16:14 DEBUG Database:69 - Executing statement prep10: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 21:16:14 DEBUG Database:71 - Retrieved result rs4: org.h2.result.LocalResult@27eb1295 columns: 1 rows: 1 pos: -1
+
+2018-05-09 21:16:14 DEBUG Database:69 - Executing statement prep11: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 21:16:14 DEBUG Database:71 - Retrieved result rs5: org.h2.result.LocalResult@33ff0899 columns: 1 rows: 1 pos: -1
+
+2018-05-09 21:16:14 DEBUG Database:81 - Executing statement prep12: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 579.4, 2: 1}
+
+2018-05-09 21:16:14 DEBUG Database:83 - Executing prep12: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 579.4, 2: 1} completed!
+
+2018-05-09 21:16:14 DEBUG Database:69 - Executing statement prep13: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 21:16:14 DEBUG Database:71 - Retrieved result rs6: org.h2.result.LocalResult@70a41b66 columns: 1 rows: 1 pos: -1
+
+2018-05-09 21:16:14 DEBUG Database:81 - Executing statement prep14: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 520.6, 2: 0}
+
+2018-05-09 21:16:14 DEBUG Database:83 - Executing prep14: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 520.6, 2: 0} completed!
+
+2018-05-09 21:16:14 DEBUG Database:81 - Executing statement prep15: INSERT INTO TRANSACTIONS VALUES (?,?,?,?,?) {1: 0, 2: 2, 3: 1, 4: 0, 5: 20.6}
+
+2018-05-09 21:16:14 DEBUG Database:83 - Executing prep15: INSERT INTO TRANSACTIONS VALUES (?,?,?,?,?) {1: 0, 2: 2, 3: 1, 4: 0, 5: 20.6} completed!
+
+2018-05-09 21:16:14 DEBUG PerformTransaction:26 - Successfully submitted!
+
+2018-05-09 21:16:14 DEBUG PerformTransaction:47 - Successfully submitted!
+
+2018-05-09 21:16:26 DEBUG Database:69 - Executing statement prep16: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 21:16:26 DEBUG Database:71 - Retrieved result rs7: org.h2.result.LocalResult@117abf38 columns: 1 rows: 1 pos: -1
+
+2018-05-09 21:16:26 DEBUG Database:69 - Executing statement prep17: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 2}
+
+2018-05-09 21:16:26 DEBUG Database:71 - Retrieved result rs8: org.h2.result.LocalResult@1fbd5367 columns: 1 rows: 1 pos: -1
+
+2018-05-09 21:16:26 DEBUG Database:69 - Executing statement prep18: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 21:16:26 DEBUG Database:71 - Retrieved result rs9: org.h2.result.LocalResult@1b82d448 columns: 1 rows: 1 pos: -1
+
+2018-05-09 21:16:26 DEBUG Database:69 - Executing statement prep19: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 2}
+
+2018-05-09 21:16:26 DEBUG Database:71 - Retrieved result rs10: org.h2.result.LocalResult@5e80595c columns: 1 rows: 1 pos: -1
+
+2018-05-09 21:16:26 DEBUG Database:69 - Executing statement prep20: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 21:16:26 DEBUG Database:71 - Retrieved result rs11: org.h2.result.LocalResult@1a47aecb columns: 1 rows: 1 pos: -1
+
+2018-05-09 21:16:26 DEBUG Database:69 - Executing statement prep21: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 21:16:26 DEBUG Database:71 - Retrieved result rs12: org.h2.result.LocalResult@6f94e08f columns: 1 rows: 1 pos: -1
+
+2018-05-09 21:16:26 DEBUG Database:81 - Executing statement prep22: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 458.79999999999995, 2: 1}
+
+2018-05-09 21:16:26 DEBUG Database:83 - Executing prep22: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 458.79999999999995, 2: 1} completed!
+
+2018-05-09 21:16:26 DEBUG Database:69 - Executing statement prep23: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 2}
+
+2018-05-09 21:16:26 DEBUG Database:71 - Retrieved result rs13: org.h2.result.LocalResult@62b949a1 columns: 1 rows: 1 pos: -1
+
+2018-05-09 21:16:26 DEBUG Database:81 - Executing statement prep24: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 240.6, 2: 2}
+
+2018-05-09 21:16:26 DEBUG Database:83 - Executing prep24: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 240.6, 2: 2} completed!
+
+2018-05-09 21:16:26 DEBUG Database:81 - Executing statement prep25: INSERT INTO TRANSACTIONS VALUES (?,?,?,?,?) {1: 1, 2: 2, 3: 1, 4: 2, 5: 120.6}
+
+2018-05-09 21:16:26 DEBUG Database:83 - Executing prep25: INSERT INTO TRANSACTIONS VALUES (?,?,?,?,?) {1: 1, 2: 2, 3: 1, 4: 2, 5: 120.6} completed!
+
+2018-05-09 21:16:26 DEBUG PerformTransaction:26 - Successfully submitted!
+
+2018-05-09 21:16:26 DEBUG PerformTransaction:47 - Successfully submitted!
+
+2018-05-09 21:16:46 DEBUG Database:69 - Executing statement prep26: SELECT COUNT(*) FROM TRANSACTIONS WHERE TransactionId = ? {1: 1}
+
+2018-05-09 21:16:47 DEBUG Database:71 - Retrieved result rs14: org.h2.result.LocalResult@36b658d3 columns: 1 rows: 1 pos: -1
+
+2018-05-09 21:16:47 DEBUG Database:41 - Transaction 1 is valid!
+2018-05-09 21:16:47 DEBUG Database:69 - Executing statement prep27: SELECT FromId, ToId, Count, Status FROM TRANSACTIONS WHERE TransactionId = ? {1: 1}
+
+2018-05-09 21:16:47 DEBUG Database:71 - Retrieved result rs15: org.h2.result.LocalResult@73b4c061 columns: 4 rows: 1 pos: -1
+
+2018-05-09 21:16:47 DEBUG PerformTransaction:63 -  {"id": "1" , "from": 1 , "to": "2" , "count": "120,600000" , "status" : "COMMITED" }
+2018-05-09 21:16:52 DEBUG Database:69 - Executing statement prep28: SELECT COUNT(*) FROM TRANSACTIONS WHERE TransactionId = ? {1: 0}
+
+2018-05-09 21:16:52 DEBUG Database:71 - Retrieved result rs16: org.h2.result.LocalResult@7c64dbb9 columns: 1 rows: 1 pos: -1
+
+2018-05-09 21:16:52 DEBUG Database:41 - Transaction 0 is valid!
+2018-05-09 21:16:52 DEBUG Database:69 - Executing statement prep29: SELECT FromId, ToId, Count, Status FROM TRANSACTIONS WHERE TransactionId = ? {1: 0}
+
+2018-05-09 21:16:52 DEBUG Database:71 - Retrieved result rs17: org.h2.result.LocalResult@42e165fe columns: 4 rows: 1 pos: -1
+
+2018-05-09 21:16:52 DEBUG PerformTransaction:63 -  {"id": "0" , "from": 1 , "to": "0" , "count": "20,600000" , "status" : "COMMITED" }
+2018-05-09 22:15:05 DEBUG Database:81 - Executing statement prep0: CREATE TABLE ACCOUNTS( UserId INTEGER NOT NULL AUTO_INCREMENT,Balance DOUBLE NOT NULL DEFAULT 0,CONSTRAINT chk_balance CHECK (Balance >= 0),PRIMARY KEY (UserId))
+
+2018-05-09 22:15:05 DEBUG Database:83 - Executing prep0: CREATE TABLE ACCOUNTS( UserId INTEGER NOT NULL AUTO_INCREMENT,Balance DOUBLE NOT NULL DEFAULT 0,CONSTRAINT chk_balance CHECK (Balance >= 0),PRIMARY KEY (UserId)) completed!
+
+2018-05-09 22:15:05 DEBUG Database:81 - Executing statement prep1: CREATE TABLE TRANSACTIONS( TransactionId INTEGER NOT NULL,Status INTEGER NOT NULL DEFAULT 0,FromId INTEGER NOT NULL,ToId INTEGER NOT NULL,Count DOUBLE NOT NULL,CONSTRAINT chk_count CHECK (Count > 0),PRIMARY KEY (TransactionId) )
+
+2018-05-09 22:15:05 DEBUG Database:83 - Executing prep1: CREATE TABLE TRANSACTIONS( TransactionId INTEGER NOT NULL,Status INTEGER NOT NULL DEFAULT 0,FromId INTEGER NOT NULL,ToId INTEGER NOT NULL,Count DOUBLE NOT NULL,CONSTRAINT chk_count CHECK (Count > 0),PRIMARY KEY (TransactionId) ) completed!
+
+2018-05-09 22:15:05 DEBUG Database:81 - Executing statement prep2: INSERT INTO ACCOUNTS VALUES (?,?) {1: 0, 2: 500.0}
+
+2018-05-09 22:15:05 DEBUG Database:83 - Executing prep2: INSERT INTO ACCOUNTS VALUES (?,?) {1: 0, 2: 500.0} completed!
+
+2018-05-09 22:15:05 DEBUG Database:81 - Executing statement prep3: INSERT INTO ACCOUNTS VALUES (?,?) {1: 1, 2: 600.0}
+
+2018-05-09 22:15:05 DEBUG Database:83 - Executing prep3: INSERT INTO ACCOUNTS VALUES (?,?) {1: 1, 2: 600.0} completed!
+
+2018-05-09 22:15:05 DEBUG Database:81 - Executing statement prep4: INSERT INTO ACCOUNTS VALUES (?,?) {1: 2, 2: 120.0}
+
+2018-05-09 22:15:05 DEBUG Database:83 - Executing prep4: INSERT INTO ACCOUNTS VALUES (?,?) {1: 2, 2: 120.0} completed!
+
+2018-05-09 22:15:05 DEBUG Database:81 - Executing statement prep5: INSERT INTO ACCOUNTS VALUES (?,?) {1: 3, 2: 345.5}
+
+2018-05-09 22:15:05 DEBUG Database:83 - Executing prep5: INSERT INTO ACCOUNTS VALUES (?,?) {1: 3, 2: 345.5} completed!
+
+2018-05-09 22:24:08 DEBUG Database:81 - Executing statement prep0: CREATE TABLE ACCOUNTS( UserId INTEGER NOT NULL AUTO_INCREMENT,Balance DOUBLE NOT NULL DEFAULT 0,CONSTRAINT chk_balance CHECK (Balance >= 0),PRIMARY KEY (UserId))
+
+2018-05-09 22:24:08 DEBUG Database:83 - Executing prep0: CREATE TABLE ACCOUNTS( UserId INTEGER NOT NULL AUTO_INCREMENT,Balance DOUBLE NOT NULL DEFAULT 0,CONSTRAINT chk_balance CHECK (Balance >= 0),PRIMARY KEY (UserId)) completed!
+
+2018-05-09 22:24:08 DEBUG Database:81 - Executing statement prep1: CREATE TABLE TRANSACTIONS( TransactionId INTEGER NOT NULL,Status INTEGER NOT NULL DEFAULT 0,FromId INTEGER NOT NULL,ToId INTEGER NOT NULL,Count DOUBLE NOT NULL,CONSTRAINT chk_count CHECK (Count > 0),PRIMARY KEY (TransactionId) )
+
+2018-05-09 22:24:08 DEBUG Database:83 - Executing prep1: CREATE TABLE TRANSACTIONS( TransactionId INTEGER NOT NULL,Status INTEGER NOT NULL DEFAULT 0,FromId INTEGER NOT NULL,ToId INTEGER NOT NULL,Count DOUBLE NOT NULL,CONSTRAINT chk_count CHECK (Count > 0),PRIMARY KEY (TransactionId) ) completed!
+
+2018-05-09 22:24:08 DEBUG Database:81 - Executing statement prep2: INSERT INTO ACCOUNTS VALUES (?,?) {1: 0, 2: 500.0}
+
+2018-05-09 22:24:08 DEBUG Database:83 - Executing prep2: INSERT INTO ACCOUNTS VALUES (?,?) {1: 0, 2: 500.0} completed!
+
+2018-05-09 22:24:08 DEBUG Database:81 - Executing statement prep3: INSERT INTO ACCOUNTS VALUES (?,?) {1: 1, 2: 600.0}
+
+2018-05-09 22:24:08 DEBUG Database:83 - Executing prep3: INSERT INTO ACCOUNTS VALUES (?,?) {1: 1, 2: 600.0} completed!
+
+2018-05-09 22:24:08 DEBUG Database:81 - Executing statement prep4: INSERT INTO ACCOUNTS VALUES (?,?) {1: 2, 2: 120.0}
+
+2018-05-09 22:24:08 DEBUG Database:83 - Executing prep4: INSERT INTO ACCOUNTS VALUES (?,?) {1: 2, 2: 120.0} completed!
+
+2018-05-09 22:24:08 DEBUG Database:81 - Executing statement prep5: INSERT INTO ACCOUNTS VALUES (?,?) {1: 3, 2: 345.5}
+
+2018-05-09 22:24:08 DEBUG Database:83 - Executing prep5: INSERT INTO ACCOUNTS VALUES (?,?) {1: 3, 2: 345.5} completed!
+
+2018-05-09 22:24:15 DEBUG PerformTransaction:37 - { "from": 1,"to": "0","count": "20,600000" }
+2018-05-09 22:25:43 DEBUG Database:81 - Executing statement prep0: CREATE TABLE ACCOUNTS( UserId INTEGER NOT NULL AUTO_INCREMENT,Balance DOUBLE NOT NULL DEFAULT 0,CONSTRAINT chk_balance CHECK (Balance >= 0),PRIMARY KEY (UserId))
+
+2018-05-09 22:25:43 DEBUG Database:83 - Executing prep0: CREATE TABLE ACCOUNTS( UserId INTEGER NOT NULL AUTO_INCREMENT,Balance DOUBLE NOT NULL DEFAULT 0,CONSTRAINT chk_balance CHECK (Balance >= 0),PRIMARY KEY (UserId)) completed!
+
+2018-05-09 22:25:43 DEBUG Database:81 - Executing statement prep1: CREATE TABLE TRANSACTIONS( TransactionId INTEGER NOT NULL,Status INTEGER NOT NULL DEFAULT 0,FromId INTEGER NOT NULL,ToId INTEGER NOT NULL,Count DOUBLE NOT NULL,CONSTRAINT chk_count CHECK (Count > 0),PRIMARY KEY (TransactionId) )
+
+2018-05-09 22:25:43 DEBUG Database:83 - Executing prep1: CREATE TABLE TRANSACTIONS( TransactionId INTEGER NOT NULL,Status INTEGER NOT NULL DEFAULT 0,FromId INTEGER NOT NULL,ToId INTEGER NOT NULL,Count DOUBLE NOT NULL,CONSTRAINT chk_count CHECK (Count > 0),PRIMARY KEY (TransactionId) ) completed!
+
+2018-05-09 22:25:43 DEBUG Database:81 - Executing statement prep2: INSERT INTO ACCOUNTS VALUES (?,?) {1: 0, 2: 500.0}
+
+2018-05-09 22:25:43 DEBUG Database:83 - Executing prep2: INSERT INTO ACCOUNTS VALUES (?,?) {1: 0, 2: 500.0} completed!
+
+2018-05-09 22:25:43 DEBUG Database:81 - Executing statement prep3: INSERT INTO ACCOUNTS VALUES (?,?) {1: 1, 2: 600.0}
+
+2018-05-09 22:25:43 DEBUG Database:83 - Executing prep3: INSERT INTO ACCOUNTS VALUES (?,?) {1: 1, 2: 600.0} completed!
+
+2018-05-09 22:25:43 DEBUG Database:81 - Executing statement prep4: INSERT INTO ACCOUNTS VALUES (?,?) {1: 2, 2: 120.0}
+
+2018-05-09 22:25:43 DEBUG Database:83 - Executing prep4: INSERT INTO ACCOUNTS VALUES (?,?) {1: 2, 2: 120.0} completed!
+
+2018-05-09 22:25:43 DEBUG Database:81 - Executing statement prep5: INSERT INTO ACCOUNTS VALUES (?,?) {1: 3, 2: 345.5}
+
+2018-05-09 22:25:43 DEBUG Database:83 - Executing prep5: INSERT INTO ACCOUNTS VALUES (?,?) {1: 3, 2: 345.5} completed!
+
+2018-05-09 22:25:48 DEBUG PerformTransaction:37 - { "from": 1,"to": "0","count": "20.6" }
+2018-05-09 22:25:48 DEBUG Database:69 - Executing statement prep6: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:25:48 DEBUG Database:71 - Retrieved result rs0: org.h2.result.LocalResult@5010cbe9 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:25:48 DEBUG Database:69 - Executing statement prep7: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:25:48 DEBUG Database:71 - Retrieved result rs1: org.h2.result.LocalResult@6ee36edc columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:25:48 DEBUG Database:69 - Executing statement prep8: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:25:48 DEBUG Database:71 - Retrieved result rs2: org.h2.result.LocalResult@6c28b489 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:25:48 DEBUG Database:69 - Executing statement prep9: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:25:48 DEBUG Database:71 - Retrieved result rs3: org.h2.result.LocalResult@17966dc8 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:25:48 DEBUG Database:69 - Executing statement prep10: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:25:48 DEBUG Database:71 - Retrieved result rs4: org.h2.result.LocalResult@74e873d5 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:25:48 DEBUG Database:69 - Executing statement prep11: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:25:48 DEBUG Database:71 - Retrieved result rs5: org.h2.result.LocalResult@188761a columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:25:48 DEBUG Database:81 - Executing statement prep12: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 579.4, 2: 1}
+
+2018-05-09 22:25:48 DEBUG Database:83 - Executing prep12: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 579.4, 2: 1} completed!
+
+2018-05-09 22:25:48 DEBUG Database:69 - Executing statement prep13: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:25:48 DEBUG Database:71 - Retrieved result rs6: org.h2.result.LocalResult@3bb07a2e columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:25:48 DEBUG Database:81 - Executing statement prep14: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 520.6, 2: 0}
+
+2018-05-09 22:25:48 DEBUG Database:83 - Executing prep14: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 520.6, 2: 0} completed!
+
+2018-05-09 22:25:48 DEBUG Database:81 - Executing statement prep15: INSERT INTO TRANSACTIONS VALUES (?,?,?,?,?) {1: 0, 2: 2, 3: 1, 4: 0, 5: 20.6}
+
+2018-05-09 22:25:48 DEBUG Database:83 - Executing prep15: INSERT INTO TRANSACTIONS VALUES (?,?,?,?,?) {1: 0, 2: 2, 3: 1, 4: 0, 5: 20.6} completed!
+
+2018-05-09 22:25:48 DEBUG PerformTransaction:26 - Successfully submitted!
+
+2018-05-09 22:25:48 DEBUG PerformTransaction:48 - Successfully submitted!
+
+2018-05-09 22:32:32 DEBUG Database:81 - Executing statement prep0: CREATE TABLE ACCOUNTS( UserId INTEGER NOT NULL AUTO_INCREMENT,Balance DOUBLE NOT NULL DEFAULT 0,CONSTRAINT chk_balance CHECK (Balance >= 0),PRIMARY KEY (UserId))
+
+2018-05-09 22:32:32 DEBUG Database:83 - Executing prep0: CREATE TABLE ACCOUNTS( UserId INTEGER NOT NULL AUTO_INCREMENT,Balance DOUBLE NOT NULL DEFAULT 0,CONSTRAINT chk_balance CHECK (Balance >= 0),PRIMARY KEY (UserId)) completed!
+
+2018-05-09 22:32:32 DEBUG Database:81 - Executing statement prep1: CREATE TABLE TRANSACTIONS( TransactionId INTEGER NOT NULL,Status INTEGER NOT NULL DEFAULT 0,FromId INTEGER NOT NULL,ToId INTEGER NOT NULL,Count DOUBLE NOT NULL,CONSTRAINT chk_count CHECK (Count > 0),PRIMARY KEY (TransactionId) )
+
+2018-05-09 22:32:32 DEBUG Database:83 - Executing prep1: CREATE TABLE TRANSACTIONS( TransactionId INTEGER NOT NULL,Status INTEGER NOT NULL DEFAULT 0,FromId INTEGER NOT NULL,ToId INTEGER NOT NULL,Count DOUBLE NOT NULL,CONSTRAINT chk_count CHECK (Count > 0),PRIMARY KEY (TransactionId) ) completed!
+
+2018-05-09 22:32:32 DEBUG DatabaseTestFromTxt:28 - add id: 0 , balance: 500,000000
+2018-05-09 22:32:32 DEBUG Database:81 - Executing statement prep2: INSERT INTO ACCOUNTS VALUES (?,?) {1: 0, 2: 500.0}
+
+2018-05-09 22:32:32 DEBUG Database:83 - Executing prep2: INSERT INTO ACCOUNTS VALUES (?,?) {1: 0, 2: 500.0} completed!
+
+2018-05-09 22:32:32 DEBUG DatabaseTestFromTxt:28 - add id: 1 , balance: 600,000000
+2018-05-09 22:32:32 DEBUG Database:81 - Executing statement prep3: INSERT INTO ACCOUNTS VALUES (?,?) {1: 1, 2: 600.0}
+
+2018-05-09 22:32:32 DEBUG Database:83 - Executing prep3: INSERT INTO ACCOUNTS VALUES (?,?) {1: 1, 2: 600.0} completed!
+
+2018-05-09 22:32:32 DEBUG DatabaseTestFromTxt:28 - add id: 2 , balance: 120,000000
+2018-05-09 22:32:32 DEBUG Database:81 - Executing statement prep4: INSERT INTO ACCOUNTS VALUES (?,?) {1: 2, 2: 120.0}
+
+2018-05-09 22:32:32 DEBUG Database:83 - Executing prep4: INSERT INTO ACCOUNTS VALUES (?,?) {1: 2, 2: 120.0} completed!
+
+2018-05-09 22:32:32 DEBUG DatabaseTestFromTxt:28 - add id: 3 , balance: 345,500000
+2018-05-09 22:32:32 DEBUG Database:81 - Executing statement prep5: INSERT INTO ACCOUNTS VALUES (?,?) {1: 3, 2: 345.5}
+
+2018-05-09 22:32:32 DEBUG Database:83 - Executing prep5: INSERT INTO ACCOUNTS VALUES (?,?) {1: 3, 2: 345.5} completed!
+
+2018-05-09 22:32:40 DEBUG PerformTransaction:37 - { "from": 1,"to": "0","count": "123.45" }
+2018-05-09 22:32:40 DEBUG Database:69 - Executing statement prep6: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:32:40 DEBUG Database:71 - Retrieved result rs0: org.h2.result.LocalResult@5aeaed20 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:32:40 DEBUG Database:69 - Executing statement prep7: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:32:40 DEBUG Database:71 - Retrieved result rs1: org.h2.result.LocalResult@743c868 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:32:40 DEBUG Database:69 - Executing statement prep8: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:32:40 DEBUG Database:71 - Retrieved result rs2: org.h2.result.LocalResult@39c29cc8 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:32:40 DEBUG Database:69 - Executing statement prep9: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:32:40 DEBUG Database:71 - Retrieved result rs3: org.h2.result.LocalResult@3f4e590c columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:32:40 DEBUG Database:69 - Executing statement prep10: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:32:40 DEBUG Database:71 - Retrieved result rs4: org.h2.result.LocalResult@32403028 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:32:40 DEBUG Database:69 - Executing statement prep11: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:32:40 DEBUG Database:71 - Retrieved result rs5: org.h2.result.LocalResult@2b59ae80 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:32:40 DEBUG Database:81 - Executing statement prep12: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 476.55, 2: 1}
+
+2018-05-09 22:32:40 DEBUG Database:83 - Executing prep12: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 476.55, 2: 1} completed!
+
+2018-05-09 22:32:40 DEBUG Database:69 - Executing statement prep13: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:32:40 DEBUG Database:71 - Retrieved result rs6: org.h2.result.LocalResult@7869442b columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:32:40 DEBUG Database:81 - Executing statement prep14: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 623.45, 2: 0}
+
+2018-05-09 22:32:40 DEBUG Database:83 - Executing prep14: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 623.45, 2: 0} completed!
+
+2018-05-09 22:32:40 DEBUG Database:81 - Executing statement prep15: INSERT INTO TRANSACTIONS VALUES (?,?,?,?,?) {1: 0, 2: 2, 3: 1, 4: 0, 5: 123.45}
+
+2018-05-09 22:32:40 DEBUG Database:83 - Executing prep15: INSERT INTO TRANSACTIONS VALUES (?,?,?,?,?) {1: 0, 2: 2, 3: 1, 4: 0, 5: 123.45} completed!
+
+2018-05-09 22:32:40 DEBUG PerformTransaction:26 - Successfully submitted!
+
+2018-05-09 22:32:40 DEBUG PerformTransaction:48 - Successfully submitted!
+
+2018-05-09 22:32:40 DEBUG TransferTest:26 -  Response:  {"ID": "0" , "FROM": 1 , "TO": "0" , "COUNT": "123,450000" , "STATUS" : "COMMITED" } 
+2018-05-09 22:32:40 DEBUG Database:69 - Executing statement prep16: SELECT COUNT(*) FROM TRANSACTIONS WHERE TransactionId = ? {1: 0}
+
+2018-05-09 22:32:40 DEBUG Database:71 - Retrieved result rs7: org.h2.result.LocalResult@1651027c columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:32:40 DEBUG Database:41 - Transaction 0 is valid!
+2018-05-09 22:32:40 DEBUG Database:69 - Executing statement prep17: SELECT FromId, ToId, Count, Status FROM TRANSACTIONS WHERE TransactionId = ? {1: 0}
+
+2018-05-09 22:32:40 DEBUG Database:71 - Retrieved result rs8: org.h2.result.LocalResult@53539ed2 columns: 4 rows: 1 pos: -1
+
+2018-05-09 22:32:40 DEBUG PerformTransaction:63 -  {"id": "0" , "from": 1 , "to": "0" , "count": "123,450000" , "status" : "COMMITED" }
+2018-05-09 22:32:40 DEBUG TransferTest:30 -  Response:  {"ID": "0" , "FROM": 1 , "TO": "0" , "COUNT": "123,450000" , "STATUS" : "COMMITED" } 
+2018-05-09 22:50:42 DEBUG PerformTransaction:37 - { "from": 1,"to": "0","count": "123.45" }
+2018-05-09 22:50:42 DEBUG Database:69 - Executing statement prep18: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:50:42 DEBUG Database:71 - Retrieved result rs9: org.h2.result.LocalResult@181a606d columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:50:42 DEBUG Database:69 - Executing statement prep19: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:50:42 DEBUG Database:71 - Retrieved result rs10: org.h2.result.LocalResult@16dd9d1e columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:50:42 DEBUG Database:69 - Executing statement prep20: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:50:42 DEBUG Database:71 - Retrieved result rs11: org.h2.result.LocalResult@12e20b1d columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:50:42 DEBUG Database:69 - Executing statement prep21: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:50:42 DEBUG Database:71 - Retrieved result rs12: org.h2.result.LocalResult@57e09725 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:50:42 DEBUG Database:69 - Executing statement prep22: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:50:42 DEBUG Database:71 - Retrieved result rs13: org.h2.result.LocalResult@1c329cbc columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:50:42 DEBUG Database:69 - Executing statement prep23: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:50:42 DEBUG Database:71 - Retrieved result rs14: org.h2.result.LocalResult@667dc749 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:50:42 DEBUG Database:81 - Executing statement prep24: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 353.1, 2: 1}
+
+2018-05-09 22:50:42 DEBUG Database:83 - Executing prep24: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 353.1, 2: 1} completed!
+
+2018-05-09 22:50:42 DEBUG Database:69 - Executing statement prep25: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:50:42 DEBUG Database:71 - Retrieved result rs15: org.h2.result.LocalResult@64459278 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:50:42 DEBUG Database:81 - Executing statement prep26: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 746.9000000000001, 2: 0}
+
+2018-05-09 22:50:42 DEBUG Database:83 - Executing prep26: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 746.9000000000001, 2: 0} completed!
+
+2018-05-09 22:50:42 DEBUG Database:81 - Executing statement prep27: INSERT INTO TRANSACTIONS VALUES (?,?,?,?,?) {1: 1, 2: 2, 3: 1, 4: 0, 5: 123.45}
+
+2018-05-09 22:50:42 DEBUG Database:83 - Executing prep27: INSERT INTO TRANSACTIONS VALUES (?,?,?,?,?) {1: 1, 2: 2, 3: 1, 4: 0, 5: 123.45} completed!
+
+2018-05-09 22:50:42 DEBUG PerformTransaction:26 - Successfully submitted!
+
+2018-05-09 22:50:42 DEBUG PerformTransaction:48 - Successfully submitted!
+
+2018-05-09 22:50:42 DEBUG TransferTest:29 -  Response:  {"ID": "1" , "FROM": 1 , "TO": "0" , "COUNT": "123,450000" , "STATUS" : "COMMITED" } 
+2018-05-09 22:50:42 DEBUG Database:69 - Executing statement prep28: SELECT COUNT(*) FROM TRANSACTIONS WHERE TransactionId = ? {1: 0}
+
+2018-05-09 22:50:42 DEBUG Database:71 - Retrieved result rs16: org.h2.result.LocalResult@63733de columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:50:42 DEBUG Database:41 - Transaction 0 is valid!
+2018-05-09 22:50:42 DEBUG Database:69 - Executing statement prep29: SELECT FromId, ToId, Count, Status FROM TRANSACTIONS WHERE TransactionId = ? {1: 0}
+
+2018-05-09 22:50:42 DEBUG Database:71 - Retrieved result rs17: org.h2.result.LocalResult@8f0dd68 columns: 4 rows: 1 pos: -1
+
+2018-05-09 22:50:42 DEBUG PerformTransaction:63 -  {"id": "0" , "from": 1 , "to": "0" , "count": "123,450000" , "status" : "COMMITED" }
+2018-05-09 22:50:42 DEBUG TransferTest:33 -  Response:  {"ID": "0" , "FROM": 1 , "TO": "0" , "COUNT": "123,450000" , "STATUS" : "COMMITED" } 
+2018-05-09 22:50:42 DEBUG TransferTest:37 -  Response: <HTML>
+<HEAD>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML;CHARSET=ISO-8859-1"/>
+<TITLE>ERROR 404 </TITLE>
+</HEAD>
+<BODY>
+<H2>HTTP ERROR: 404</H2>
+<P>PROBLEM ACCESSING /REVOLUT/GET-ACCOUNT-BALANCE. REASON:
+<PRE>    NOT FOUND</PRE></P>
+<HR /><I><SMALL>POWERED BY JETTY://</SMALL></I>
+</BODY>
+</HTML>
+ 
+2018-05-09 22:51:16 DEBUG Database:81 - Executing statement prep0: CREATE TABLE ACCOUNTS( UserId INTEGER NOT NULL AUTO_INCREMENT,Balance DOUBLE NOT NULL DEFAULT 0,CONSTRAINT chk_balance CHECK (Balance >= 0),PRIMARY KEY (UserId))
+
+2018-05-09 22:51:16 DEBUG Database:83 - Executing prep0: CREATE TABLE ACCOUNTS( UserId INTEGER NOT NULL AUTO_INCREMENT,Balance DOUBLE NOT NULL DEFAULT 0,CONSTRAINT chk_balance CHECK (Balance >= 0),PRIMARY KEY (UserId)) completed!
+
+2018-05-09 22:51:16 DEBUG Database:81 - Executing statement prep1: CREATE TABLE TRANSACTIONS( TransactionId INTEGER NOT NULL,Status INTEGER NOT NULL DEFAULT 0,FromId INTEGER NOT NULL,ToId INTEGER NOT NULL,Count DOUBLE NOT NULL,CONSTRAINT chk_count CHECK (Count > 0),PRIMARY KEY (TransactionId) )
+
+2018-05-09 22:51:16 DEBUG Database:83 - Executing prep1: CREATE TABLE TRANSACTIONS( TransactionId INTEGER NOT NULL,Status INTEGER NOT NULL DEFAULT 0,FromId INTEGER NOT NULL,ToId INTEGER NOT NULL,Count DOUBLE NOT NULL,CONSTRAINT chk_count CHECK (Count > 0),PRIMARY KEY (TransactionId) ) completed!
+
+2018-05-09 22:51:16 DEBUG DatabaseTestFromTxt:28 - add id: 0 , balance: 500,000000
+2018-05-09 22:51:16 DEBUG Database:81 - Executing statement prep2: INSERT INTO ACCOUNTS VALUES (?,?) {1: 0, 2: 500.0}
+
+2018-05-09 22:51:16 DEBUG Database:83 - Executing prep2: INSERT INTO ACCOUNTS VALUES (?,?) {1: 0, 2: 500.0} completed!
+
+2018-05-09 22:51:16 DEBUG DatabaseTestFromTxt:28 - add id: 1 , balance: 600,000000
+2018-05-09 22:51:16 DEBUG Database:81 - Executing statement prep3: INSERT INTO ACCOUNTS VALUES (?,?) {1: 1, 2: 600.0}
+
+2018-05-09 22:51:16 DEBUG Database:83 - Executing prep3: INSERT INTO ACCOUNTS VALUES (?,?) {1: 1, 2: 600.0} completed!
+
+2018-05-09 22:51:16 DEBUG DatabaseTestFromTxt:28 - add id: 2 , balance: 120,000000
+2018-05-09 22:51:16 DEBUG Database:81 - Executing statement prep4: INSERT INTO ACCOUNTS VALUES (?,?) {1: 2, 2: 120.0}
+
+2018-05-09 22:51:16 DEBUG Database:83 - Executing prep4: INSERT INTO ACCOUNTS VALUES (?,?) {1: 2, 2: 120.0} completed!
+
+2018-05-09 22:51:16 DEBUG DatabaseTestFromTxt:28 - add id: 3 , balance: 345,500000
+2018-05-09 22:51:16 DEBUG Database:81 - Executing statement prep5: INSERT INTO ACCOUNTS VALUES (?,?) {1: 3, 2: 345.5}
+
+2018-05-09 22:51:16 DEBUG Database:83 - Executing prep5: INSERT INTO ACCOUNTS VALUES (?,?) {1: 3, 2: 345.5} completed!
+
+2018-05-09 22:51:22 DEBUG PerformTransaction:40 - { "from": 1,"to": "0","count": "123.45" }
+2018-05-09 22:51:22 DEBUG Database:69 - Executing statement prep6: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:51:22 DEBUG Database:71 - Retrieved result rs0: org.h2.result.LocalResult@686fb9f1 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:51:22 DEBUG Database:69 - Executing statement prep7: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:51:22 DEBUG Database:71 - Retrieved result rs1: org.h2.result.LocalResult@10fdf300 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:51:22 DEBUG Database:69 - Executing statement prep8: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:51:22 DEBUG Database:71 - Retrieved result rs2: org.h2.result.LocalResult@2297e341 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:51:22 DEBUG Database:69 - Executing statement prep9: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:51:22 DEBUG Database:71 - Retrieved result rs3: org.h2.result.LocalResult@4347557a columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:51:22 DEBUG Database:69 - Executing statement prep10: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:51:22 DEBUG Database:71 - Retrieved result rs4: org.h2.result.LocalResult@5672ccd2 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:51:22 DEBUG Database:69 - Executing statement prep11: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:51:22 DEBUG Database:71 - Retrieved result rs5: org.h2.result.LocalResult@296840ef columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:51:22 DEBUG Database:81 - Executing statement prep12: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 476.55, 2: 1}
+
+2018-05-09 22:51:22 DEBUG Database:83 - Executing prep12: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 476.55, 2: 1} completed!
+
+2018-05-09 22:51:22 DEBUG Database:69 - Executing statement prep13: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:51:22 DEBUG Database:71 - Retrieved result rs6: org.h2.result.LocalResult@d391d2b columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:51:22 DEBUG Database:81 - Executing statement prep14: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 623.45, 2: 0}
+
+2018-05-09 22:51:22 DEBUG Database:83 - Executing prep14: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 623.45, 2: 0} completed!
+
+2018-05-09 22:51:22 DEBUG Database:81 - Executing statement prep15: INSERT INTO TRANSACTIONS VALUES (?,?,?,?,?) {1: 0, 2: 2, 3: 1, 4: 0, 5: 123.45}
+
+2018-05-09 22:51:22 DEBUG Database:83 - Executing prep15: INSERT INTO TRANSACTIONS VALUES (?,?,?,?,?) {1: 0, 2: 2, 3: 1, 4: 0, 5: 123.45} completed!
+
+2018-05-09 22:51:22 DEBUG PerformTransaction:26 - Successfully submitted!
+
+2018-05-09 22:51:22 DEBUG PerformTransaction:51 - Successfully submitted!
+
+2018-05-09 22:51:22 DEBUG TransferTest:29 -  Response:  {"ID": "0" , "FROM": 1 , "TO": "0" , "COUNT": "123,450000" , "STATUS" : "COMMITED" } 
+2018-05-09 22:51:22 DEBUG Database:69 - Executing statement prep16: SELECT COUNT(*) FROM TRANSACTIONS WHERE TransactionId = ? {1: 0}
+
+2018-05-09 22:51:22 DEBUG Database:71 - Retrieved result rs7: org.h2.result.LocalResult@9f6a040 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:51:22 DEBUG Database:41 - Transaction 0 is valid!
+2018-05-09 22:51:22 DEBUG Database:69 - Executing statement prep17: SELECT FromId, ToId, Count, Status FROM TRANSACTIONS WHERE TransactionId = ? {1: 0}
+
+2018-05-09 22:51:22 DEBUG Database:71 - Retrieved result rs8: org.h2.result.LocalResult@4cf43f1a columns: 4 rows: 1 pos: -1
+
+2018-05-09 22:51:22 DEBUG PerformTransaction:66 -  {"id": "0" , "from": 1 , "to": "0" , "count": "123,450000" , "status" : "COMMITED" }
+2018-05-09 22:51:22 DEBUG TransferTest:33 -  Response:  {"ID": "0" , "FROM": 1 , "TO": "0" , "COUNT": "123,450000" , "STATUS" : "COMMITED" } 
+2018-05-09 22:51:22 DEBUG Database:69 - Executing statement prep18: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:51:22 DEBUG Database:71 - Retrieved result rs9: org.h2.result.LocalResult@76bd0ed8 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:51:22 DEBUG Database:69 - Executing statement prep19: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:51:22 DEBUG Database:71 - Retrieved result rs10: org.h2.result.LocalResult@728284d7 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:51:22 DEBUG PerformTransaction:89 -  {"id": "0" , "balance": "623,450000"
+2018-05-09 22:51:22 DEBUG TransferTest:37 -  Response:  {"ID": "0" , "BALANCE": "623,450000" 
+2018-05-09 22:52:22 DEBUG Database:81 - Executing statement prep0: CREATE TABLE ACCOUNTS( UserId INTEGER NOT NULL AUTO_INCREMENT,Balance DOUBLE NOT NULL DEFAULT 0,CONSTRAINT chk_balance CHECK (Balance >= 0),PRIMARY KEY (UserId))
+
+2018-05-09 22:52:22 DEBUG Database:83 - Executing prep0: CREATE TABLE ACCOUNTS( UserId INTEGER NOT NULL AUTO_INCREMENT,Balance DOUBLE NOT NULL DEFAULT 0,CONSTRAINT chk_balance CHECK (Balance >= 0),PRIMARY KEY (UserId)) completed!
+
+2018-05-09 22:52:22 DEBUG Database:81 - Executing statement prep1: CREATE TABLE TRANSACTIONS( TransactionId INTEGER NOT NULL,Status INTEGER NOT NULL DEFAULT 0,FromId INTEGER NOT NULL,ToId INTEGER NOT NULL,Count DOUBLE NOT NULL,CONSTRAINT chk_count CHECK (Count > 0),PRIMARY KEY (TransactionId) )
+
+2018-05-09 22:52:22 DEBUG Database:83 - Executing prep1: CREATE TABLE TRANSACTIONS( TransactionId INTEGER NOT NULL,Status INTEGER NOT NULL DEFAULT 0,FromId INTEGER NOT NULL,ToId INTEGER NOT NULL,Count DOUBLE NOT NULL,CONSTRAINT chk_count CHECK (Count > 0),PRIMARY KEY (TransactionId) ) completed!
+
+2018-05-09 22:52:22 DEBUG DatabaseTestFromTxt:28 - add id: 0 , balance: 500,000000
+2018-05-09 22:52:22 DEBUG Database:81 - Executing statement prep2: INSERT INTO ACCOUNTS VALUES (?,?) {1: 0, 2: 500.0}
+
+2018-05-09 22:52:22 DEBUG Database:83 - Executing prep2: INSERT INTO ACCOUNTS VALUES (?,?) {1: 0, 2: 500.0} completed!
+
+2018-05-09 22:52:22 DEBUG DatabaseTestFromTxt:28 - add id: 1 , balance: 600,000000
+2018-05-09 22:52:22 DEBUG Database:81 - Executing statement prep3: INSERT INTO ACCOUNTS VALUES (?,?) {1: 1, 2: 600.0}
+
+2018-05-09 22:52:22 DEBUG Database:83 - Executing prep3: INSERT INTO ACCOUNTS VALUES (?,?) {1: 1, 2: 600.0} completed!
+
+2018-05-09 22:52:22 DEBUG DatabaseTestFromTxt:28 - add id: 2 , balance: 120,000000
+2018-05-09 22:52:22 DEBUG Database:81 - Executing statement prep4: INSERT INTO ACCOUNTS VALUES (?,?) {1: 2, 2: 120.0}
+
+2018-05-09 22:52:22 DEBUG Database:83 - Executing prep4: INSERT INTO ACCOUNTS VALUES (?,?) {1: 2, 2: 120.0} completed!
+
+2018-05-09 22:52:22 DEBUG DatabaseTestFromTxt:28 - add id: 3 , balance: 345,500000
+2018-05-09 22:52:22 DEBUG Database:81 - Executing statement prep5: INSERT INTO ACCOUNTS VALUES (?,?) {1: 3, 2: 345.5}
+
+2018-05-09 22:52:22 DEBUG Database:83 - Executing prep5: INSERT INTO ACCOUNTS VALUES (?,?) {1: 3, 2: 345.5} completed!
+
+2018-05-09 22:52:28 DEBUG PerformTransaction:40 - { "from": 1,"to": "0","count": "123.45" }
+2018-05-09 22:52:28 DEBUG Database:69 - Executing statement prep6: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:52:28 DEBUG Database:71 - Retrieved result rs0: org.h2.result.LocalResult@5ec78c4e columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:52:28 DEBUG Database:69 - Executing statement prep7: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:52:28 DEBUG Database:71 - Retrieved result rs1: org.h2.result.LocalResult@82019e9 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:52:28 DEBUG Database:69 - Executing statement prep8: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:52:28 DEBUG Database:71 - Retrieved result rs2: org.h2.result.LocalResult@704631ab columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:52:28 DEBUG Database:69 - Executing statement prep9: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:52:28 DEBUG Database:71 - Retrieved result rs3: org.h2.result.LocalResult@71379801 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:52:28 DEBUG Database:69 - Executing statement prep10: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:52:28 DEBUG Database:71 - Retrieved result rs4: org.h2.result.LocalResult@13f0cf95 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:52:28 DEBUG Database:69 - Executing statement prep11: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:52:28 DEBUG Database:71 - Retrieved result rs5: org.h2.result.LocalResult@1b977353 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:52:28 DEBUG Database:81 - Executing statement prep12: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 476.55, 2: 1}
+
+2018-05-09 22:52:28 DEBUG Database:83 - Executing prep12: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 476.55, 2: 1} completed!
+
+2018-05-09 22:52:28 DEBUG Database:69 - Executing statement prep13: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:52:28 DEBUG Database:71 - Retrieved result rs6: org.h2.result.LocalResult@2be5727 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:52:28 DEBUG Database:81 - Executing statement prep14: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 623.45, 2: 0}
+
+2018-05-09 22:52:28 DEBUG Database:83 - Executing prep14: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 623.45, 2: 0} completed!
+
+2018-05-09 22:52:28 DEBUG Database:81 - Executing statement prep15: INSERT INTO TRANSACTIONS VALUES (?,?,?,?,?) {1: 0, 2: 2, 3: 1, 4: 0, 5: 123.45}
+
+2018-05-09 22:52:28 DEBUG Database:83 - Executing prep15: INSERT INTO TRANSACTIONS VALUES (?,?,?,?,?) {1: 0, 2: 2, 3: 1, 4: 0, 5: 123.45} completed!
+
+2018-05-09 22:52:28 DEBUG PerformTransaction:26 - Successfully submitted!
+
+2018-05-09 22:52:28 DEBUG PerformTransaction:51 - Successfully submitted!
+
+2018-05-09 22:52:28 DEBUG TransferTest:29 -  Response:  {"ID": "0" , "FROM": 1 , "TO": "0" , "COUNT": "123,450000" , "STATUS" : "COMMITED" } 
+2018-05-09 22:52:28 DEBUG Database:69 - Executing statement prep16: SELECT COUNT(*) FROM TRANSACTIONS WHERE TransactionId = ? {1: 0}
+
+2018-05-09 22:52:28 DEBUG Database:71 - Retrieved result rs7: org.h2.result.LocalResult@3c7f0ab2 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:52:28 DEBUG Database:41 - Transaction 0 is valid!
+2018-05-09 22:52:28 DEBUG Database:69 - Executing statement prep17: SELECT FromId, ToId, Count, Status FROM TRANSACTIONS WHERE TransactionId = ? {1: 0}
+
+2018-05-09 22:52:28 DEBUG Database:71 - Retrieved result rs8: org.h2.result.LocalResult@797d9359 columns: 4 rows: 1 pos: -1
+
+2018-05-09 22:52:28 DEBUG PerformTransaction:66 -  {"id": "0" , "from": 1 , "to": "0" , "count": "123,450000" , "status" : "COMMITED" }
+2018-05-09 22:52:28 DEBUG TransferTest:33 -  Response:  {"ID": "0" , "FROM": 1 , "TO": "0" , "COUNT": "123,450000" , "STATUS" : "COMMITED" } 
+2018-05-09 22:52:28 DEBUG Database:69 - Executing statement prep18: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:52:28 DEBUG Database:71 - Retrieved result rs9: org.h2.result.LocalResult@3e0ea8d1 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:52:28 DEBUG Database:69 - Executing statement prep19: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:52:28 DEBUG Database:71 - Retrieved result rs10: org.h2.result.LocalResult@3a313bc8 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:52:28 DEBUG PerformTransaction:89 -  {"id": "0" , "balance": "623,450000"}
+2018-05-09 22:52:28 DEBUG TransferTest:37 -  Response:  {"ID": "0" , "BALANCE": "623,450000"} 
+2018-05-09 22:53:40 DEBUG Database:81 - Executing statement prep0: CREATE TABLE ACCOUNTS( UserId INTEGER NOT NULL AUTO_INCREMENT,Balance DOUBLE NOT NULL DEFAULT 0,CONSTRAINT chk_balance CHECK (Balance >= 0),PRIMARY KEY (UserId))
+
+2018-05-09 22:53:40 DEBUG Database:83 - Executing prep0: CREATE TABLE ACCOUNTS( UserId INTEGER NOT NULL AUTO_INCREMENT,Balance DOUBLE NOT NULL DEFAULT 0,CONSTRAINT chk_balance CHECK (Balance >= 0),PRIMARY KEY (UserId)) completed!
+
+2018-05-09 22:53:40 DEBUG Database:81 - Executing statement prep1: CREATE TABLE TRANSACTIONS( TransactionId INTEGER NOT NULL,Status INTEGER NOT NULL DEFAULT 0,FromId INTEGER NOT NULL,ToId INTEGER NOT NULL,Count DOUBLE NOT NULL,CONSTRAINT chk_count CHECK (Count > 0),PRIMARY KEY (TransactionId) )
+
+2018-05-09 22:53:40 DEBUG Database:83 - Executing prep1: CREATE TABLE TRANSACTIONS( TransactionId INTEGER NOT NULL,Status INTEGER NOT NULL DEFAULT 0,FromId INTEGER NOT NULL,ToId INTEGER NOT NULL,Count DOUBLE NOT NULL,CONSTRAINT chk_count CHECK (Count > 0),PRIMARY KEY (TransactionId) ) completed!
+
+2018-05-09 22:53:40 DEBUG DatabaseTestFromTxt:28 - add id: 0 , balance: 500,000000
+2018-05-09 22:53:40 DEBUG Database:81 - Executing statement prep2: INSERT INTO ACCOUNTS VALUES (?,?) {1: 0, 2: 500.0}
+
+2018-05-09 22:53:40 DEBUG Database:83 - Executing prep2: INSERT INTO ACCOUNTS VALUES (?,?) {1: 0, 2: 500.0} completed!
+
+2018-05-09 22:53:40 DEBUG DatabaseTestFromTxt:28 - add id: 1 , balance: 600,000000
+2018-05-09 22:53:40 DEBUG Database:81 - Executing statement prep3: INSERT INTO ACCOUNTS VALUES (?,?) {1: 1, 2: 600.0}
+
+2018-05-09 22:53:40 DEBUG Database:83 - Executing prep3: INSERT INTO ACCOUNTS VALUES (?,?) {1: 1, 2: 600.0} completed!
+
+2018-05-09 22:53:40 DEBUG DatabaseTestFromTxt:28 - add id: 2 , balance: 120,000000
+2018-05-09 22:53:40 DEBUG Database:81 - Executing statement prep4: INSERT INTO ACCOUNTS VALUES (?,?) {1: 2, 2: 120.0}
+
+2018-05-09 22:53:40 DEBUG Database:83 - Executing prep4: INSERT INTO ACCOUNTS VALUES (?,?) {1: 2, 2: 120.0} completed!
+
+2018-05-09 22:53:40 DEBUG DatabaseTestFromTxt:28 - add id: 3 , balance: 345,500000
+2018-05-09 22:53:40 DEBUG Database:81 - Executing statement prep5: INSERT INTO ACCOUNTS VALUES (?,?) {1: 3, 2: 345.5}
+
+2018-05-09 22:53:40 DEBUG Database:83 - Executing prep5: INSERT INTO ACCOUNTS VALUES (?,?) {1: 3, 2: 345.5} completed!
+
+2018-05-09 22:53:46 DEBUG PerformTransaction:40 - { "from": 1,"to": "0","count": "123.45" }
+2018-05-09 22:53:46 DEBUG Database:69 - Executing statement prep6: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:53:46 DEBUG Database:71 - Retrieved result rs0: org.h2.result.LocalResult@5ec78c4e columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:53:46 DEBUG Database:69 - Executing statement prep7: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:53:46 DEBUG Database:71 - Retrieved result rs1: org.h2.result.LocalResult@82019e9 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:53:46 DEBUG Database:69 - Executing statement prep8: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:53:46 DEBUG Database:71 - Retrieved result rs2: org.h2.result.LocalResult@704631ab columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:53:46 DEBUG Database:69 - Executing statement prep9: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:53:46 DEBUG Database:71 - Retrieved result rs3: org.h2.result.LocalResult@71379801 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:53:46 DEBUG Database:69 - Executing statement prep10: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:53:46 DEBUG Database:71 - Retrieved result rs4: org.h2.result.LocalResult@13f0cf95 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:53:46 DEBUG Database:69 - Executing statement prep11: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:53:46 DEBUG Database:71 - Retrieved result rs5: org.h2.result.LocalResult@1b977353 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:53:46 DEBUG Database:81 - Executing statement prep12: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 476.55, 2: 1}
+
+2018-05-09 22:53:46 DEBUG Database:83 - Executing prep12: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 476.55, 2: 1} completed!
+
+2018-05-09 22:53:46 DEBUG Database:69 - Executing statement prep13: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:53:46 DEBUG Database:71 - Retrieved result rs6: org.h2.result.LocalResult@2be5727 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:53:46 DEBUG Database:81 - Executing statement prep14: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 623.45, 2: 0}
+
+2018-05-09 22:53:46 DEBUG Database:83 - Executing prep14: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 623.45, 2: 0} completed!
+
+2018-05-09 22:53:46 DEBUG Database:81 - Executing statement prep15: INSERT INTO TRANSACTIONS VALUES (?,?,?,?,?) {1: 0, 2: 2, 3: 1, 4: 0, 5: 123.45}
+
+2018-05-09 22:53:46 DEBUG Database:83 - Executing prep15: INSERT INTO TRANSACTIONS VALUES (?,?,?,?,?) {1: 0, 2: 2, 3: 1, 4: 0, 5: 123.45} completed!
+
+2018-05-09 22:53:46 DEBUG PerformTransaction:26 - Successfully submitted!
+
+2018-05-09 22:53:46 DEBUG PerformTransaction:51 - Successfully submitted!
+
+2018-05-09 22:53:46 DEBUG TransferTest:31 -  Response:  {"ID": "0" , "FROM": 1 , "TO": "0" , "COUNT": "123,450000" , "STATUS" : "COMMITED" } 
+2018-05-09 22:53:46 DEBUG Database:69 - Executing statement prep16: SELECT COUNT(*) FROM TRANSACTIONS WHERE TransactionId = ? {1: 0}
+
+2018-05-09 22:53:46 DEBUG Database:71 - Retrieved result rs7: org.h2.result.LocalResult@7c2ea697 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:53:46 DEBUG Database:41 - Transaction 0 is valid!
+2018-05-09 22:53:46 DEBUG Database:69 - Executing statement prep17: SELECT FromId, ToId, Count, Status FROM TRANSACTIONS WHERE TransactionId = ? {1: 0}
+
+2018-05-09 22:53:46 DEBUG Database:71 - Retrieved result rs8: org.h2.result.LocalResult@392c2776 columns: 4 rows: 1 pos: -1
+
+2018-05-09 22:53:46 DEBUG PerformTransaction:66 -  {"id": "0" , "from": 1 , "to": "0" , "count": "123,450000" , "status" : "COMMITED" }
+2018-05-09 22:53:46 DEBUG TransferTest:35 -  Response:  {"ID": "0" , "FROM": 1 , "TO": "0" , "COUNT": "123,450000" , "STATUS" : "COMMITED" } 
+2018-05-09 22:53:46 DEBUG Database:69 - Executing statement prep18: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:53:46 DEBUG Database:71 - Retrieved result rs9: org.h2.result.LocalResult@263171b8 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:53:46 DEBUG Database:69 - Executing statement prep19: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:53:46 DEBUG Database:71 - Retrieved result rs10: org.h2.result.LocalResult@220ee1a6 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:53:46 DEBUG PerformTransaction:89 -  {"id": "0" , "balance": "623,450000"}
+2018-05-09 22:53:46 DEBUG TransferTest:39 -  Response:  {"ID": "0" , "BALANCE": "623,450000"} 
+2018-05-09 22:53:46 DEBUG Database:69 - Executing statement prep20: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 101}
+
+2018-05-09 22:53:46 DEBUG Database:71 - Retrieved result rs11: org.h2.result.LocalResult@6cc24af8 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:53:46 ERROR AccountNotExistException:15 - Account 101 not found in the database
+2018-05-09 22:53:46 ERROR PerformTransaction:85 - Account id 101 not found!
+2018-05-09 22:53:46 DEBUG TransferTest:43 -  Response:  {"ID": "-1" , "BALANCE":"-1" 
+2018-05-09 22:55:41 DEBUG Database:81 - Executing statement prep0: CREATE TABLE ACCOUNTS( UserId INTEGER NOT NULL AUTO_INCREMENT,Balance DOUBLE NOT NULL DEFAULT 0,CONSTRAINT chk_balance CHECK (Balance >= 0),PRIMARY KEY (UserId))
+
+2018-05-09 22:55:41 DEBUG Database:83 - Executing prep0: CREATE TABLE ACCOUNTS( UserId INTEGER NOT NULL AUTO_INCREMENT,Balance DOUBLE NOT NULL DEFAULT 0,CONSTRAINT chk_balance CHECK (Balance >= 0),PRIMARY KEY (UserId)) completed!
+
+2018-05-09 22:55:41 DEBUG Database:81 - Executing statement prep1: CREATE TABLE TRANSACTIONS( TransactionId INTEGER NOT NULL,Status INTEGER NOT NULL DEFAULT 0,FromId INTEGER NOT NULL,ToId INTEGER NOT NULL,Count DOUBLE NOT NULL,CONSTRAINT chk_count CHECK (Count > 0),PRIMARY KEY (TransactionId) )
+
+2018-05-09 22:55:41 DEBUG Database:83 - Executing prep1: CREATE TABLE TRANSACTIONS( TransactionId INTEGER NOT NULL,Status INTEGER NOT NULL DEFAULT 0,FromId INTEGER NOT NULL,ToId INTEGER NOT NULL,Count DOUBLE NOT NULL,CONSTRAINT chk_count CHECK (Count > 0),PRIMARY KEY (TransactionId) ) completed!
+
+2018-05-09 22:55:41 DEBUG DatabaseTestFromTxt:28 - add id: 0 , balance: 500,000000
+2018-05-09 22:55:41 DEBUG Database:81 - Executing statement prep2: INSERT INTO ACCOUNTS VALUES (?,?) {1: 0, 2: 500.0}
+
+2018-05-09 22:55:41 DEBUG Database:83 - Executing prep2: INSERT INTO ACCOUNTS VALUES (?,?) {1: 0, 2: 500.0} completed!
+
+2018-05-09 22:55:41 DEBUG DatabaseTestFromTxt:28 - add id: 1 , balance: 600,000000
+2018-05-09 22:55:41 DEBUG Database:81 - Executing statement prep3: INSERT INTO ACCOUNTS VALUES (?,?) {1: 1, 2: 600.0}
+
+2018-05-09 22:55:41 DEBUG Database:83 - Executing prep3: INSERT INTO ACCOUNTS VALUES (?,?) {1: 1, 2: 600.0} completed!
+
+2018-05-09 22:55:41 DEBUG DatabaseTestFromTxt:28 - add id: 2 , balance: 120,000000
+2018-05-09 22:55:41 DEBUG Database:81 - Executing statement prep4: INSERT INTO ACCOUNTS VALUES (?,?) {1: 2, 2: 120.0}
+
+2018-05-09 22:55:41 DEBUG Database:83 - Executing prep4: INSERT INTO ACCOUNTS VALUES (?,?) {1: 2, 2: 120.0} completed!
+
+2018-05-09 22:55:41 DEBUG DatabaseTestFromTxt:28 - add id: 3 , balance: 345,500000
+2018-05-09 22:55:41 DEBUG Database:81 - Executing statement prep5: INSERT INTO ACCOUNTS VALUES (?,?) {1: 3, 2: 345.5}
+
+2018-05-09 22:55:41 DEBUG Database:83 - Executing prep5: INSERT INTO ACCOUNTS VALUES (?,?) {1: 3, 2: 345.5} completed!
+
+2018-05-09 22:55:56 DEBUG PerformTransaction:40 - { "from": 1,"to": "0","count": "123.45" }
+2018-05-09 22:55:56 DEBUG Database:69 - Executing statement prep6: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:55:56 DEBUG Database:71 - Retrieved result rs0: org.h2.result.LocalResult@408e8d90 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:55:56 DEBUG Database:69 - Executing statement prep7: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:55:56 DEBUG Database:71 - Retrieved result rs1: org.h2.result.LocalResult@5b37a20a columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:55:56 DEBUG Database:69 - Executing statement prep8: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:55:56 DEBUG Database:71 - Retrieved result rs2: org.h2.result.LocalResult@6fc0270d columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:55:56 DEBUG Database:69 - Executing statement prep9: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:55:56 DEBUG Database:71 - Retrieved result rs3: org.h2.result.LocalResult@6fa04888 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:55:56 DEBUG Database:69 - Executing statement prep10: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:55:56 DEBUG Database:71 - Retrieved result rs4: org.h2.result.LocalResult@5b76bae1 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:55:56 DEBUG Database:69 - Executing statement prep11: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 22:55:56 DEBUG Database:71 - Retrieved result rs5: org.h2.result.LocalResult@3db77477 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:55:56 DEBUG Database:81 - Executing statement prep12: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 476.55, 2: 1}
+
+2018-05-09 22:55:56 DEBUG Database:83 - Executing prep12: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 476.55, 2: 1} completed!
+
+2018-05-09 22:55:56 DEBUG Database:69 - Executing statement prep13: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:55:56 DEBUG Database:71 - Retrieved result rs6: org.h2.result.LocalResult@506726f1 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:55:56 DEBUG Database:81 - Executing statement prep14: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 623.45, 2: 0}
+
+2018-05-09 22:55:56 DEBUG Database:83 - Executing prep14: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 623.45, 2: 0} completed!
+
+2018-05-09 22:55:56 DEBUG Database:81 - Executing statement prep15: INSERT INTO TRANSACTIONS VALUES (?,?,?,?,?) {1: 0, 2: 2, 3: 1, 4: 0, 5: 123.45}
+
+2018-05-09 22:55:56 DEBUG Database:83 - Executing prep15: INSERT INTO TRANSACTIONS VALUES (?,?,?,?,?) {1: 0, 2: 2, 3: 1, 4: 0, 5: 123.45} completed!
+
+2018-05-09 22:55:56 DEBUG PerformTransaction:26 - Successfully submitted!
+
+2018-05-09 22:55:56 DEBUG PerformTransaction:51 - Successfully submitted!
+
+2018-05-09 22:55:56 DEBUG TransferTest:31 -  Response:  {"ID": "0" , "FROM": 1 , "TO": "0" , "COUNT": "123,450000" , "STATUS" : "COMMITED" } 
+2018-05-09 22:55:56 DEBUG Database:69 - Executing statement prep16: SELECT COUNT(*) FROM TRANSACTIONS WHERE TransactionId = ? {1: 90}
+
+2018-05-09 22:55:56 DEBUG Database:71 - Retrieved result rs7: org.h2.result.LocalResult@489edd91 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:55:56 ERROR AccountNotExistException:14 - Transaction 90 not found in the database!
+2018-05-09 22:55:56 DEBUG TransferTest:35 -  Response: <HTML>
+<HEAD>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML;CHARSET=ISO-8859-1"/>
+<TITLE>ERROR 500 </TITLE>
+</HEAD>
+<BODY>
+<H2>HTTP ERROR: 500</H2>
+<P>PROBLEM ACCESSING /REVOLUT/GET-TRANSACTION. REASON:
+<PRE>    REQUEST FAILED.</PRE></P>
+<HR /><I><SMALL>POWERED BY JETTY://</SMALL></I>
+</BODY>
+</HTML>
+ 
+2018-05-09 22:55:56 DEBUG Database:69 - Executing statement prep17: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:55:56 DEBUG Database:71 - Retrieved result rs8: org.h2.result.LocalResult@52d56dcf columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:55:56 DEBUG Database:69 - Executing statement prep18: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 22:55:56 DEBUG Database:71 - Retrieved result rs9: org.h2.result.LocalResult@56eaf34d columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:55:56 DEBUG PerformTransaction:91 -  {"id": "0" , "balance": "623,450000"}
+2018-05-09 22:55:56 DEBUG TransferTest:39 -  Response:  {"ID": "0" , "BALANCE": "623,450000"} 
+2018-05-09 22:55:56 DEBUG Database:69 - Executing statement prep19: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 101}
+
+2018-05-09 22:55:56 DEBUG Database:71 - Retrieved result rs10: org.h2.result.LocalResult@113f5fd0 columns: 1 rows: 1 pos: -1
+
+2018-05-09 22:55:56 ERROR AccountNotExistException:15 - Account 101 not found in the database
+2018-05-09 22:55:56 ERROR PerformTransaction:87 - Account id 101 not found!
+2018-05-09 22:55:56 DEBUG TransferTest:43 -  Response:  {"ID": "-1" , "BALANCE":"-1"} 
+2018-05-09 23:01:23 DEBUG Database:81 - Executing statement prep0: CREATE TABLE ACCOUNTS( UserId INTEGER NOT NULL AUTO_INCREMENT,Balance DOUBLE NOT NULL DEFAULT 0,CONSTRAINT chk_balance CHECK (Balance >= 0),PRIMARY KEY (UserId))
+
+2018-05-09 23:01:23 DEBUG Database:83 - Executing prep0: CREATE TABLE ACCOUNTS( UserId INTEGER NOT NULL AUTO_INCREMENT,Balance DOUBLE NOT NULL DEFAULT 0,CONSTRAINT chk_balance CHECK (Balance >= 0),PRIMARY KEY (UserId)) completed!
+
+2018-05-09 23:01:23 DEBUG Database:81 - Executing statement prep1: CREATE TABLE TRANSACTIONS( TransactionId INTEGER NOT NULL,Status INTEGER NOT NULL DEFAULT 0,FromId INTEGER NOT NULL,ToId INTEGER NOT NULL,Count DOUBLE NOT NULL,CONSTRAINT chk_count CHECK (Count > 0),PRIMARY KEY (TransactionId) )
+
+2018-05-09 23:01:23 DEBUG Database:83 - Executing prep1: CREATE TABLE TRANSACTIONS( TransactionId INTEGER NOT NULL,Status INTEGER NOT NULL DEFAULT 0,FromId INTEGER NOT NULL,ToId INTEGER NOT NULL,Count DOUBLE NOT NULL,CONSTRAINT chk_count CHECK (Count > 0),PRIMARY KEY (TransactionId) ) completed!
+
+2018-05-09 23:01:23 DEBUG DatabaseTestFromTxt:28 - add id: 0 , balance: 500,000000
+2018-05-09 23:01:23 DEBUG Database:81 - Executing statement prep2: INSERT INTO ACCOUNTS VALUES (?,?) {1: 0, 2: 500.0}
+
+2018-05-09 23:01:23 DEBUG Database:83 - Executing prep2: INSERT INTO ACCOUNTS VALUES (?,?) {1: 0, 2: 500.0} completed!
+
+2018-05-09 23:01:23 DEBUG DatabaseTestFromTxt:28 - add id: 1 , balance: 600,000000
+2018-05-09 23:01:23 DEBUG Database:81 - Executing statement prep3: INSERT INTO ACCOUNTS VALUES (?,?) {1: 1, 2: 600.0}
+
+2018-05-09 23:01:23 DEBUG Database:83 - Executing prep3: INSERT INTO ACCOUNTS VALUES (?,?) {1: 1, 2: 600.0} completed!
+
+2018-05-09 23:01:23 DEBUG DatabaseTestFromTxt:28 - add id: 2 , balance: 120,000000
+2018-05-09 23:01:23 DEBUG Database:81 - Executing statement prep4: INSERT INTO ACCOUNTS VALUES (?,?) {1: 2, 2: 120.0}
+
+2018-05-09 23:01:23 DEBUG Database:83 - Executing prep4: INSERT INTO ACCOUNTS VALUES (?,?) {1: 2, 2: 120.0} completed!
+
+2018-05-09 23:01:23 DEBUG DatabaseTestFromTxt:28 - add id: 3 , balance: 345,500000
+2018-05-09 23:01:23 DEBUG Database:81 - Executing statement prep5: INSERT INTO ACCOUNTS VALUES (?,?) {1: 3, 2: 345.5}
+
+2018-05-09 23:01:23 DEBUG Database:83 - Executing prep5: INSERT INTO ACCOUNTS VALUES (?,?) {1: 3, 2: 345.5} completed!
+
+2018-05-09 23:01:28 DEBUG PerformTransaction:40 - { "from": 1,"to": "0","count": "123.45" }
+2018-05-09 23:01:28 DEBUG Database:69 - Executing statement prep6: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 23:01:28 DEBUG Database:71 - Retrieved result rs0: org.h2.result.LocalResult@15647681 columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:01:28 DEBUG Database:69 - Executing statement prep7: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 23:01:28 DEBUG Database:71 - Retrieved result rs1: org.h2.result.LocalResult@74dfe383 columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:01:28 DEBUG Database:69 - Executing statement prep8: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 23:01:28 DEBUG Database:71 - Retrieved result rs2: org.h2.result.LocalResult@5764fb33 columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:01:28 DEBUG Database:69 - Executing statement prep9: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 23:01:28 DEBUG Database:71 - Retrieved result rs3: org.h2.result.LocalResult@23046470 columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:01:28 DEBUG Database:69 - Executing statement prep10: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 23:01:28 DEBUG Database:71 - Retrieved result rs4: org.h2.result.LocalResult@1562ceef columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:01:28 DEBUG Database:69 - Executing statement prep11: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 23:01:28 DEBUG Database:71 - Retrieved result rs5: org.h2.result.LocalResult@1e2ae43b columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:01:28 DEBUG Database:81 - Executing statement prep12: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 476.55, 2: 1}
+
+2018-05-09 23:01:28 DEBUG Database:83 - Executing prep12: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 476.55, 2: 1} completed!
+
+2018-05-09 23:01:28 DEBUG Database:69 - Executing statement prep13: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 23:01:28 DEBUG Database:71 - Retrieved result rs6: org.h2.result.LocalResult@6dd65967 columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:01:28 DEBUG Database:81 - Executing statement prep14: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 623.45, 2: 0}
+
+2018-05-09 23:01:28 DEBUG Database:83 - Executing prep14: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 623.45, 2: 0} completed!
+
+2018-05-09 23:01:28 DEBUG Database:81 - Executing statement prep15: INSERT INTO TRANSACTIONS VALUES (?,?,?,?,?) {1: 0, 2: 2, 3: 1, 4: 0, 5: 123.45}
+
+2018-05-09 23:01:28 DEBUG Database:83 - Executing prep15: INSERT INTO TRANSACTIONS VALUES (?,?,?,?,?) {1: 0, 2: 2, 3: 1, 4: 0, 5: 123.45} completed!
+
+2018-05-09 23:01:28 DEBUG PerformTransaction:26 - Successfully submitted!
+
+2018-05-09 23:01:28 DEBUG PerformTransaction:51 - Successfully submitted!
+
+2018-05-09 23:01:28 DEBUG TransferTest:31 -  Response:  {"ID": "0" , "FROM": 1 , "TO": "0" , "COUNT": "123,450000" , "STATUS" : "COMMITED" } 
+2018-05-09 23:01:28 DEBUG Database:69 - Executing statement prep16: SELECT COUNT(*) FROM TRANSACTIONS WHERE TransactionId = ? {1: 90}
+
+2018-05-09 23:01:28 DEBUG Database:71 - Retrieved result rs7: org.h2.result.LocalResult@56eaf34d columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:01:28 ERROR AccountNotExistException:14 - Transaction 90 not found in the database!
+2018-05-09 23:01:28 ERROR PerformTransaction:70 - Transaction id 90 not found!
+2018-05-09 23:01:28 DEBUG TransferTest:35 -  Response:  {"ID": "90" , "FROM": "-1", "TO": "-1" , "COUNT": "-1" , "STATUS": "-1"} 
+2018-05-09 23:01:28 DEBUG Database:69 - Executing statement prep17: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 23:01:28 DEBUG Database:71 - Retrieved result rs8: org.h2.result.LocalResult@38409962 columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:01:28 DEBUG Database:69 - Executing statement prep18: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 23:01:28 DEBUG Database:71 - Retrieved result rs9: org.h2.result.LocalResult@3c7f0ab2 columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:01:28 DEBUG PerformTransaction:97 -  {"id": "0" , "balance": "623,450000"}
+2018-05-09 23:01:28 DEBUG TransferTest:39 -  Response:  {"ID": "0" , "BALANCE": "623,450000"} 
+2018-05-09 23:01:28 DEBUG Database:69 - Executing statement prep19: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 101}
+
+2018-05-09 23:01:28 DEBUG Database:71 - Retrieved result rs10: org.h2.result.LocalResult@4266b6e1 columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:01:28 ERROR AccountNotExistException:15 - Account 101 not found in the database
+2018-05-09 23:01:28 ERROR PerformTransaction:93 - Account id 101 not found!
+2018-05-09 23:01:28 DEBUG TransferTest:43 -  Response:  {"ID": "101" , "BALANCE":"-1"} 
+2018-05-09 23:02:39 DEBUG Database:81 - Executing statement prep0: CREATE TABLE ACCOUNTS( UserId INTEGER NOT NULL AUTO_INCREMENT,Balance DOUBLE NOT NULL DEFAULT 0,CONSTRAINT chk_balance CHECK (Balance >= 0),PRIMARY KEY (UserId))
+
+2018-05-09 23:02:39 DEBUG Database:83 - Executing prep0: CREATE TABLE ACCOUNTS( UserId INTEGER NOT NULL AUTO_INCREMENT,Balance DOUBLE NOT NULL DEFAULT 0,CONSTRAINT chk_balance CHECK (Balance >= 0),PRIMARY KEY (UserId)) completed!
+
+2018-05-09 23:02:39 DEBUG Database:81 - Executing statement prep1: CREATE TABLE TRANSACTIONS( TransactionId INTEGER NOT NULL,Status INTEGER NOT NULL DEFAULT 0,FromId INTEGER NOT NULL,ToId INTEGER NOT NULL,Count DOUBLE NOT NULL,CONSTRAINT chk_count CHECK (Count > 0),PRIMARY KEY (TransactionId) )
+
+2018-05-09 23:02:39 DEBUG Database:83 - Executing prep1: CREATE TABLE TRANSACTIONS( TransactionId INTEGER NOT NULL,Status INTEGER NOT NULL DEFAULT 0,FromId INTEGER NOT NULL,ToId INTEGER NOT NULL,Count DOUBLE NOT NULL,CONSTRAINT chk_count CHECK (Count > 0),PRIMARY KEY (TransactionId) ) completed!
+
+2018-05-09 23:02:39 DEBUG DatabaseTestFromTxt:28 - add id: 0 , balance: 500,000000
+2018-05-09 23:02:39 DEBUG Database:81 - Executing statement prep2: INSERT INTO ACCOUNTS VALUES (?,?) {1: 0, 2: 500.0}
+
+2018-05-09 23:02:39 DEBUG Database:83 - Executing prep2: INSERT INTO ACCOUNTS VALUES (?,?) {1: 0, 2: 500.0} completed!
+
+2018-05-09 23:02:39 DEBUG DatabaseTestFromTxt:28 - add id: 1 , balance: 600,000000
+2018-05-09 23:02:39 DEBUG Database:81 - Executing statement prep3: INSERT INTO ACCOUNTS VALUES (?,?) {1: 1, 2: 600.0}
+
+2018-05-09 23:02:39 DEBUG Database:83 - Executing prep3: INSERT INTO ACCOUNTS VALUES (?,?) {1: 1, 2: 600.0} completed!
+
+2018-05-09 23:02:39 DEBUG DatabaseTestFromTxt:28 - add id: 2 , balance: 120,000000
+2018-05-09 23:02:39 DEBUG Database:81 - Executing statement prep4: INSERT INTO ACCOUNTS VALUES (?,?) {1: 2, 2: 120.0}
+
+2018-05-09 23:02:39 DEBUG Database:83 - Executing prep4: INSERT INTO ACCOUNTS VALUES (?,?) {1: 2, 2: 120.0} completed!
+
+2018-05-09 23:02:39 DEBUG DatabaseTestFromTxt:28 - add id: 3 , balance: 345,500000
+2018-05-09 23:02:39 DEBUG Database:81 - Executing statement prep5: INSERT INTO ACCOUNTS VALUES (?,?) {1: 3, 2: 345.5}
+
+2018-05-09 23:02:39 DEBUG Database:83 - Executing prep5: INSERT INTO ACCOUNTS VALUES (?,?) {1: 3, 2: 345.5} completed!
+
+2018-05-09 23:02:47 DEBUG PerformTransaction:40 - { "from": 1,"to": "0","count": "123.45" }
+2018-05-09 23:02:47 DEBUG Database:69 - Executing statement prep6: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 23:02:47 DEBUG Database:71 - Retrieved result rs0: org.h2.result.LocalResult@587319ec columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:02:47 DEBUG Database:69 - Executing statement prep7: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 23:02:47 DEBUG Database:71 - Retrieved result rs1: org.h2.result.LocalResult@692c65ff columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:02:47 DEBUG Database:69 - Executing statement prep8: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 23:02:47 DEBUG Database:71 - Retrieved result rs2: org.h2.result.LocalResult@3cd9b762 columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:02:47 DEBUG Database:69 - Executing statement prep9: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 23:02:47 DEBUG Database:71 - Retrieved result rs3: org.h2.result.LocalResult@7624412d columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:02:47 DEBUG Database:69 - Executing statement prep10: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 23:02:47 DEBUG Database:71 - Retrieved result rs4: org.h2.result.LocalResult@36588a7c columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:02:47 DEBUG Database:69 - Executing statement prep11: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 1}
+
+2018-05-09 23:02:47 DEBUG Database:71 - Retrieved result rs5: org.h2.result.LocalResult@3c5102d5 columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:02:47 DEBUG Database:81 - Executing statement prep12: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 476.55, 2: 1}
+
+2018-05-09 23:02:47 DEBUG Database:83 - Executing prep12: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 476.55, 2: 1} completed!
+
+2018-05-09 23:02:47 DEBUG Database:69 - Executing statement prep13: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 23:02:47 DEBUG Database:71 - Retrieved result rs6: org.h2.result.LocalResult@6bc2bf07 columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:02:47 DEBUG Database:81 - Executing statement prep14: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 623.45, 2: 0}
+
+2018-05-09 23:02:47 DEBUG Database:83 - Executing prep14: UPDATE ACCOUNTS SET Balance=? WHERE UserId=? {1: 623.45, 2: 0} completed!
+
+2018-05-09 23:02:47 DEBUG Database:81 - Executing statement prep15: INSERT INTO TRANSACTIONS VALUES (?,?,?,?,?) {1: 0, 2: 2, 3: 1, 4: 0, 5: 123.45}
+
+2018-05-09 23:02:47 DEBUG Database:83 - Executing prep15: INSERT INTO TRANSACTIONS VALUES (?,?,?,?,?) {1: 0, 2: 2, 3: 1, 4: 0, 5: 123.45} completed!
+
+2018-05-09 23:02:47 DEBUG PerformTransaction:26 - Successfully submitted!
+
+2018-05-09 23:02:47 DEBUG PerformTransaction:51 - Successfully submitted!
+
+2018-05-09 23:02:47 DEBUG TransferTest:33 -  Response:  {"ID": "0" , "FROM": 1 , "TO": "0" , "COUNT": "123,450000" , "STATUS" : "COMMITED" } 
+2018-05-09 23:02:47 DEBUG Database:69 - Executing statement prep16: SELECT COUNT(*) FROM TRANSACTIONS WHERE TransactionId = ? {1: 0}
+
+2018-05-09 23:02:47 DEBUG Database:71 - Retrieved result rs7: org.h2.result.LocalResult@1440b6fa columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:02:47 DEBUG Database:41 - Transaction 0 is valid!
+2018-05-09 23:02:47 DEBUG Database:69 - Executing statement prep17: SELECT FromId, ToId, Count, Status FROM TRANSACTIONS WHERE TransactionId = ? {1: 0}
+
+2018-05-09 23:02:47 DEBUG Database:71 - Retrieved result rs8: org.h2.result.LocalResult@51422a16 columns: 4 rows: 1 pos: -1
+
+2018-05-09 23:02:47 DEBUG PerformTransaction:73 -  {"id": "0" , "from": 1 , "to": "0" , "count": "123,450000" , "status" : "COMMITED" }
+2018-05-09 23:02:47 DEBUG TransferTest:37 -  Response:  {"ID": "0" , "FROM": 1 , "TO": "0" , "COUNT": "123,450000" , "STATUS" : "COMMITED" } 
+2018-05-09 23:02:47 DEBUG Database:69 - Executing statement prep18: SELECT COUNT(*) FROM TRANSACTIONS WHERE TransactionId = ? {1: 90}
+
+2018-05-09 23:02:47 DEBUG Database:71 - Retrieved result rs9: org.h2.result.LocalResult@3952ebff columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:02:47 ERROR AccountNotExistException:14 - Transaction 90 not found in the database!
+2018-05-09 23:02:47 ERROR PerformTransaction:70 - Transaction id 90 not found!
+2018-05-09 23:02:47 DEBUG TransferTest:41 -  Response:  {"ID": "90" , "FROM": "-1", "TO": "-1" , "COUNT": "-1" , "STATUS": "-1"} 
+2018-05-09 23:02:47 DEBUG Database:69 - Executing statement prep19: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 23:02:47 DEBUG Database:71 - Retrieved result rs10: org.h2.result.LocalResult@3e0ea8d1 columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:02:47 DEBUG Database:69 - Executing statement prep20: SELECT Balance FROM ACCOUNTS WHERE UserId=? {1: 0}
+
+2018-05-09 23:02:47 DEBUG Database:71 - Retrieved result rs11: org.h2.result.LocalResult@3a313bc8 columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:02:47 DEBUG PerformTransaction:97 -  {"id": "0" , "balance": "623,450000"}
+2018-05-09 23:02:47 DEBUG TransferTest:45 -  Response:  {"ID": "0" , "BALANCE": "623,450000"} 
+2018-05-09 23:02:47 DEBUG Database:69 - Executing statement prep21: SELECT COUNT(*) FROM ACCOUNTS WHERE UserId=? {1: 101}
+
+2018-05-09 23:02:47 DEBUG Database:71 - Retrieved result rs12: org.h2.result.LocalResult@776d5f1a columns: 1 rows: 1 pos: -1
+
+2018-05-09 23:02:47 ERROR AccountNotExistException:15 - Account 101 not found in the database
+2018-05-09 23:02:47 ERROR PerformTransaction:93 - Account id 101 not found!
+2018-05-09 23:02:47 DEBUG TransferTest:49 -  Response:  {"ID": "101" , "BALANCE":"-1"} 
