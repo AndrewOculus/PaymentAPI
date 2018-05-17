@@ -1,5 +1,7 @@
 package revolut.paymentAPI;
 
+import java.sql.SQLException;
+
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
@@ -12,16 +14,18 @@ import revolut.paymentAPI.database.DatabaseTestFromTxt;
  */
 public class App 
 {
+	private static Server jettyServer;
+	
     public static void main( String[] args ) throws Exception
     {
-
+    		
     		Database.initDb();
     		DatabaseTestFromTxt.createDatabaseTestFromTxt();
 
     		ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
         context.setContextPath("/");
 
-        Server jettyServer = new Server(8080);
+        jettyServer = new Server(8080);
         jettyServer.setHandler(context);
 
         ServletHolder jerseyServlet = context.addServlet(
@@ -38,5 +42,10 @@ public class App
         } finally {
             jettyServer.destroy();
         }
+    }
+    public static void close() throws SQLException
+    {
+		Database.closeConnection();
+    		jettyServer.destroy();
     }
 }
